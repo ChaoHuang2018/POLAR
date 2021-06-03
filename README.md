@@ -1,4 +1,4 @@
-# POLAR
+# POLAR prototype for NeurIPS 21
 POLAR is a reachability analysis framework for neural-network controlled systems (NNCSs) based on polynomial arithmetic. Compared with existing arithmetic approaches that use standard Taylor models, our framework uses a novel approach to iteratively overapproximate the neuron output ranges layer-by-layer with a combination of Bernstein polynomial interpolation for continuous activation functions and Taylor model arithmetic for the other operations. This approach can overcome the main drawback in the standard Taylor model arithmetic, i.e. its inability to handle functions that cannot be well approximated by Taylor polynomials, and significantly improve the accuracy and efficiency of reachable states computation for NNCSs. To further tighten the overapproximation, our method keeps the Taylor model remainders symbolic under the linear mappings when estimating the output range of a neural network. Experiment results across a suite of benchmarks show that POLAR significantly outperforms the state-of-the-art techniques.
 
 ## Installation
@@ -16,14 +16,14 @@ sudo apt-get install m4 libgmp3-dev libmpfr-dev libmpfr-doc libgsl-dev gsl-bin b
 
 ```
 
-./compile.sh # under the root directory ./POLAR/
+./compile.sh # under the root directory ./
 
 ```
 
 ## Running Examples - POLAR results
 
 ### Taylor models (TM) in Example 1 (page 6)
-./run_motivating.sh
+./run_motivating.sh # Taylor models of all the neurons are shown in the terminal.
 
 ### Attitude control
 ./run_attitude_control.sh
@@ -33,6 +33,7 @@ sudo apt-get install m4 libgmp3-dev libmpfr-dev libmpfr-doc libgsl-dev gsl-bin b
 
 ### Checking Result
 All results will be stored in ./outputs/
+
 Check the result of SYSTEM
 
 ```
@@ -40,5 +41,5 @@ Check the result of SYSTEM
 # verification result
 vim SYSTEM.txt
 
-# plotted flowpipes. In MATLAB, run
+# plotted flowpipes. Run the following command in MATLAB.
 SYSTEM.m
