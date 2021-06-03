@@ -114,6 +114,8 @@ int main(int argc, char *argv[])
 	tmv_input.tms.push_back(tm1);
 	tmv_input.tms.push_back(tm2);
 
+	cout << "-------------------  Layer " << 1 << " starts. ------------------- " << endl;
+
 	TaylorModelVec<Real> tmv_layer1;
 	tmv_layer1 = W1 * tmv_input;
 	tmv_layer1 += b1;
@@ -122,28 +124,27 @@ int main(int argc, char *argv[])
 	stateVars.declareVar("y2");
 	// tmv_layer1.output(cout, stateVars, tmVars);
 
-	cout << "-------------------  Layer " << 1 << " starts. ------------------- " << endl;
-
 	TaylorModelVec<Real> tmv_layer1_after;
 	tmv_layer1.activate(tmv_layer1_after, domain, "sigmoid", order, bernstein_order, partition_num, cutoff_threshold, g_setting, 0);
 
 	tmv_layer1_after.output(cout, stateVars, tmVars);
 
+	cout << "-------------------  Layer " << 2 << " starts. ------------------- " << endl;
+
 	TaylorModelVec<Real> tmv_layer2;
 	tmv_layer2 = W2 * tmv_layer1_after;
 	tmv_layer2 += b2;
 
-	cout << "-------------------  Layer " << 2 << " starts. ------------------- " << endl;
-
 	TaylorModelVec<Real> tmv_layer2_after;
 	tmv_layer2.activate(tmv_layer2_after, domain, "sigmoid", order, bernstein_order, partition_num, cutoff_threshold, g_setting, 0);
+
+	cout << "-------------------  Output layer starts. ------------------- " << endl;
+
 	tmv_layer2_after.output(cout, stateVars, tmVars);
 
 	TaylorModelVec<Real> tmv_output;
 	tmv_output = W3 * tmv_layer2_after;
 	tmv_output += b3;
-
-	cout << "-------------------  Output layer starts. ------------------- " << endl;
 
 	TaylorModelVec<Real> tmv_output_after;
 	tmv_output.activate(tmv_output_after, domain, "sigmoid", order, bernstein_order, partition_num, cutoff_threshold, g_setting, 0);

@@ -228,7 +228,7 @@ UnivariatePolynomial<Real> gen_bern_poly(string act, Interval intv, int d)
     // cout << "Berns generation time: " << seconds << " seconds" << endl;
 
     // cout << "Interval: " << intv << endl;
-    // cout << "bern_poly: " << bern_poly << endl;
+    cout << "Berns. poly.: " << bern_poly << endl;
 
     return bern_poly;
 }
@@ -344,6 +344,8 @@ double gen_bern_err_by_sample(UnivariatePolynomial<Real> berns, string act, Inte
     time(&end_timer);
     seconds = -difftime(start_timer0, end_timer);
     // cout << "Berns err time: " << seconds << " seconds" << endl;
+
+    cout << "Berns. approx. error: " << overhead + sample_diff << endl;
 
     return overhead + sample_diff;
 }
