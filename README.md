@@ -39,7 +39,7 @@ Check the result of SYSTEM
 ```
 
 # verification result
-vim SYSTEM.txt
+vim SYSTEM_0.txt
 
 # plotted flowpipes. Run the following command in MATLAB.
-SYSTEM.m
+SYSTEM_0.m
