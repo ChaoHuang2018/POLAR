@@ -5,7 +5,8 @@ LIB_HOME = ./POLAR
 LIBS = -lflowstar -lmpfr -lgmp -lgsl -lgslcblas -lm -lglpk
 CFLAGS = -I . -I $(HOME) -g -O3 -std=c++11
 LINK_FLAGS = -g -L$(LIB_HOME) -L/usr/local/lib -L$(NN_HOME)
-OBJS = NeuralNetwork.o Activation.o Neuron.o TaylorInfo.o NNTaylor.o Result_Info.o
+OBJS = NeuralNetwork.o Activation.o Neuron.o TaylorInfo.o NNTaylor.o domain_computation.o dynamics_linearization.o \
+	   LTI_Abstraction.o Trajectories.o Result_Info.o
 	   # systems/reachnn_benchmark_1_relu.o $(OBJS) systems/reachnn_benchmark_1_relu_tanh.o $(OBJS) systems/reachnn_benchmark_1_sigmoid.o $(OBJS) systems/reachnn_benchmark_1_tanh.o $(OBJS) \
 	   # systems/reachnn_benchmark_2_relu.o $(OBJS) systems/reachnn_benchmark_2_relu_tanh.o $(OBJS) systems/reachnn_benchmark_2_sigmoid.o $(OBJS) systems/reachnn_benchmark_2_tanh.o $(OBJS) \
 	   # systems/reachnn_benchmark_3_relu.o $(OBJS) systems/reachnn_benchmark_3_relu_sigmoid.o $(OBJS) systems/reachnn_benchmark_3_sigmoid.o $(OBJS) systems/reachnn_benchmark_3_tanh.o $(OBJS) \
@@ -13,8 +14,7 @@ OBJS = NeuralNetwork.o Activation.o Neuron.o TaylorInfo.o NNTaylor.o Result_Info
 	   # systems/reachnn_benchmark_5_relu.o $(OBJS) systems/reachnn_benchmark_5_relu_tanh.o $(OBJS) systems/reachnn_benchmark_5_sigmoid.o $(OBJS) systems/reachnn_benchmark_5_tanh.o $(OBJS) \
 	   # systems/reachnn_benchmark_6_tora_relu.o $(OBJS) systems/reachnn_benchmark_6_tora_relu_tanh.o $(OBJS) systems/reachnn_benchmark_6_tora_sigmoid.o $(OBJS) systems/reachnn_benchmark_6_tora_tanh.o $(OBJS)
 
-all: benchmark1_relu benchmark1_relu_tanh benchmark1_sigmoid benchmark1_tanh benchmark2_relu benchmark2_relu_tanh benchmark2_sigmoid benchmark2_tanh benchmark3_relu benchmark3_relu_sigmoid benchmark3_sigmoid benchmark3_tanh benchmark4_relu benchmark4_relu_tanh benchmark4_sigmoid benchmark4_tanh benchmark5_relu benchmark5_relu_tanh benchmark5_sigmoid benchmark5_tanh benchmark6_relu benchmark6_relu_tanh benchmark6_sigmoid benchmark6_tanh nn_attitude_control_sigmoid  
-# motivating
+all: benchmark1_relu benchmark1_relu_tanh benchmark1_sigmoid benchmark1_tanh benchmark2_relu benchmark2_relu_tanh benchmark2_sigmoid benchmark2_tanh benchmark3_relu benchmark3_relu_sigmoid benchmark3_sigmoid benchmark3_tanh benchmark4_relu benchmark4_relu_tanh benchmark4_sigmoid benchmark4_tanh benchmark5_relu benchmark5_relu_tanh benchmark5_sigmoid benchmark5_tanh benchmark6_relu benchmark6_relu_tanh benchmark6_sigmoid benchmark6_tanh nn_attitude_control_sigmoid motivating
 # all: benchmark6_tanh
 
 runtime: $(OBJS)
@@ -104,8 +104,8 @@ nn_attitude_control_sigmoid: systems/nn_attitude_control_sigmoid.o $(OBJS)
 # nn_attitude_control_tanh: systems/reachnn_nn_attitude_control_tanh.o $(OBJS)
 # 	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
-# motivating: systems/motivating.o $(OBJS)
-	# g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+motivating: systems/motivating.o $(OBJS)
+	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 %.o: %.cc
 	$(CXX) -O3 -c $(CFLAGS) -o $@ $<

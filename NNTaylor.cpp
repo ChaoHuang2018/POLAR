@@ -392,7 +392,7 @@ void NNTaylor::get_output_tmv(TaylorModelVec<Real> &tmv_output, TaylorModelVec<R
     tmv_all_layer.push_back(tmv_input);
     for (int s = 0; s < this->nn.get_num_of_hidden_layers() + 1; s++)
     {
-        cout << "-------------------  Layer " << s << " starts. ------------------- " << endl;
+        cout << "------------- Layer " << s << " starts. -------------" << endl;
         Layer layer = this->nn.get_layers()[s];
         Matrix<Interval> weight = layer.get_weight();
         Matrix<Interval> bias = layer.get_bias();
@@ -485,7 +485,7 @@ void NNTaylor::NN_Reach(TaylorModelVec<Real> &tmv_output, TaylorModelVec<Real> &
 
     for (unsigned int K = 0; true; ++K)
     {
-        cout << "-------------------  Layer " << K << " starts. ------------------- " << endl;
+		cout << "------------- Layer " << K << " starts. -------------" << endl;
 
         Flowpipe fp_layer_output;
 
@@ -688,7 +688,7 @@ void NNTaylor::NN_Reach(TaylorModelVec<Real> &tmv_output, TaylorModelVec<Real> &
         layer_input_dim = layer.get_neuron_number_this_layer();
     }
 
-    cout << tmv_output.tms.size() << endl;
+    // cout << tmv_output.tms.size() << endl;
 
     Matrix<Real> offset(nn.get_num_of_outputs(), 1);
     for (int i = 0; i < nn.get_num_of_outputs(); i++)

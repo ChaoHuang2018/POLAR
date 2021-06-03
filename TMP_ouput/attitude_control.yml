@@ -1,3 +1,0 @@
-activations: {1: Sigmoid, 2: Sigmoid, 3: Sigmoid, 4: Linear}
-offsets:
-  

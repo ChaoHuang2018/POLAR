@@ -1,5 +1,7 @@
 #include "../POLAR/Continuous.h"
 #include "../NNTaylor.h"
+#include "../domain_computation.h"
+#include "../dynamics_linearization.h"
 
 using namespace std;
 using namespace flowstar;

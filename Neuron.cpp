@@ -1,3 +1,4 @@
+#include "POLAR/Continuous.h"
 #include "Neuron.h"
 
 using namespace flowstar;

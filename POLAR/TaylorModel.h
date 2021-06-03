@@ -2359,7 +2359,6 @@ namespace flowstar
 		double seconds;
 
 		Interval tmRange;
-		this->output(cout, tmVars);
 		this->intEval(tmRange, domain);
 
 		// cout << "tmRange: " << tmRange << endl;
