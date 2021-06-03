@@ -4,6 +4,11 @@
 # Unignore all with extensions
 !*.*
 
+# Unignore all makefile
+!Makefile
+!POLAR/Makefile
+!POLAR/makefile.local
+
 # Unignore all dirs
 !*/
 
