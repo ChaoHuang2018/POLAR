@@ -22,9 +22,6 @@ sudo apt-get install m4 libgmp3-dev libmpfr-dev libmpfr-doc libgsl-dev gsl-bin b
 
 ## Running Examples - POLAR results
 
-### Taylor models (TM) in Example 1 (page 6)
-./run_motivating.sh # Taylor models of all the neurons are shown in the terminal.
-
 ### Attitude control
 ./run_attitude_control.sh
 
@@ -34,12 +31,12 @@ sudo apt-get install m4 libgmp3-dev libmpfr-dev libmpfr-doc libgsl-dev gsl-bin b
 ### Checking Result
 All results will be stored in ./outputs/
 
-Check the result of SYSTEM
+For SYSTEM, the results include a txt file that show the verification result and the POLAR running time, and a M file (with .m extension) that is used to plot the reachable sets computed by POLAR. One can check the result of SYSTEM by following commands.
 
 ```
 
 # verification result
 vim SYSTEM_0.txt
 
-# plotted flowpipes. Run the following command in MATLAB.
+# plotted reachable sets. Run the following command in MATLAB.
 SYSTEM_0.m
