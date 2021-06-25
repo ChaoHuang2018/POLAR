@@ -70,7 +70,7 @@ The following results show that our approach significantly outperforms the state
 
 
 ## Contributors
-[Chao Huang](https://chaohuang2018.github.io/main/), [Jiameng Fan](https://www.jiamengf.com), [Wenchao Li](http://sites.bu.edu/depend/people/), [Xin Chen](https://udayton.edu/directory/artssciences/computerscience/chen-xin.php), [Qi Zhu](http://users.eecs.northwestern.edu/~qzhu/)
+[Chao Huang](https://chaohuang2018.github.io/main/), [Jiameng Fan](https://www.jiamengf.com), [Xin Chen](https://udayton.edu/directory/artssciences/computerscience/chen-xin.php), [Wenchao Li](http://sites.bu.edu/depend/people/), [Qi Zhu](http://users.eecs.northwestern.edu/~qzhu/)
 
 ## References
 [1] C.Huang, J.Fan, W.Li, X.Chen, and Q.Zhu.
@@ -85,13 +85,13 @@ ACM Transactions on Embedded Computing Systems (TECS), 18:1–22, October 2019.
 The 18th International Symposium on Automated Technology for Verification and Analysis (ATVA), October 2020.
 
 [4] S.Dutta, X.Chen, and S.Sankaranarayanan.
-[Reachability analysis for neural feedback systems using regressive polynomial rule inference]. The 22nd ACM International Conference on Hybrid Systems: Computation and Control, April 2019.
+[Reachability analysis for neural feedback systems using regressive polynomial rule inference] (https://dl.acm.org/doi/10.1145/3302504.3311807). The 22nd ACM International Conference on Hybrid Systems: Computation and Control, April 2019.
 
 [5] R.Ivanov, T.J. Carpenter, J.Weimer, R.Alur, G.J. Pappas, and I.Lee.
-[Verisig 2.0: Verification of neural network controllers using taylor model preconditioning.] The 33rd International Conference on Computer-Aided Verification, July 2021 (To appear).
+[Verisig 2.0: Verification of neural network controllers using taylor model preconditioning]. The 33rd International Conference on Computer-Aided Verification, July 2021 (To appear).
 
 [6] H.Tran, X.Yang, D.M.Lopez, P.Musau, L.V.Nguyen, W.Xiang, S.Bak, and T.T.Johnson.
-[NNV: the neural network verification tool for deep neural networks and learning-enabled cyber-physical systems] The 32nd International Conference on Computer-Aided Verification, July 2020.
+[NNV: the neural network verification tool for deep neural networks and learning-enabled cyber-physical systems](https://link.springer.com/chapter/10.1007/978-3-030-53288-8_1). The 32nd International Conference on Computer-Aided Verification, July 2020.
 
 
 
