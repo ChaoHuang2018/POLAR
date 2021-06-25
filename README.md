@@ -35,13 +35,21 @@ All results will be stored in ./outputs/
 
 For SYSTEM, the results include a txt file that show the verification result and the POLAR running time, and a M file (with .m extension) that is used to plot the reachable sets computed by POLAR. One can check the result of SYSTEM by following commands.
 
+# verification result
+
 ```
 
-# verification result
 vim SYSTEM_0.txt
 
+```
+
 # plotted reachable sets. Run the following command in MATLAB.
+
+```
+
 SYSTEM_0.m
+
+```
 
 ## Comparison with state-of-the-arts
 
