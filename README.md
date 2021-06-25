@@ -57,15 +57,16 @@ The following results show that our approach significantly outperforms the state
 
 <p align="center">
     <img src="figures/benchmarks_reachableset.png" alt> 
-	
-    <em>Figure 1: Reachability analysis results. We can see that except for ex2-sigmoid, POLAR produces the tightest reachable set estimation (dark green sets) and successfully proves or disproves the reachability property for all the examples. This is in comparison with other state-of-the-art tools including ReachNN* [2, 3] (light green sets), Sherlock [4] (blue sets), Verisig 2.0 [5] (grey sets), and NNV [6] (yellow sets).</em>
+</p>
+<p align="left">	
+    Figure 1: Reachability analysis results. We can see that except for ex2-sigmoid, POLAR produces the tightest reachable set estimation (dark green sets) and successfully proves or disproves the reachability property for all the examples. This is in comparison with other state-of-the-art tools including ReachNN* [2, 3] (light green sets), Sherlock [4] (blue sets), Verisig 2.0 [5] (grey sets), and NNV [6] (yellow sets).
 </p>
 
 <p align="center">
     <img src="figures/benchmarks_table.png" alt>
 </p>
-<p align="center">
-    Table 1: V: number of state variables, &sigma: activation functions, M: number of hidden layers, $n$: number of neurons in each hidden layer. For each approach (POLAR, ReachNN*, Sherlock, Verisig 2.0), we give the runtime in seconds if it successfully verifies the property. `Unknown': the property could not be verified. `--': the approach cannot be applied due to the type of &sigma. We can see that POLAR finishes all cases within seconds, and achieves the best performance among all the tools simultaneously. In addition, POLAR scales better with the size of the neural network controller compared to ReachNN* and Verisig 2.0.
+<p align="left">
+    Table 1: V: number of state variables, $sigma$: activation functions, M: number of hidden layers, n: number of neurons in each hidden layer. For each approach (POLAR, ReachNN*, Sherlock, Verisig 2.0), we give the runtime in seconds if it successfully verifies the property. `Unknown': the property could not be verified. `--': the approach cannot be applied due to the type of $sigma$. We can see that POLAR finishes all cases within seconds, and achieves the best performance among all the tools simultaneously. In addition, POLAR scales better with the size of the neural network controller compared to ReachNN* and Verisig 2.0.
 </p>
 
 
