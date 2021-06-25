@@ -85,7 +85,7 @@ ACM Transactions on Embedded Computing Systems (TECS), 18:1–22, October 2019.
 The 18th International Symposium on Automated Technology for Verification and Analysis (ATVA), October 2020.
 
 [4] S.Dutta, X.Chen, and S.Sankaranarayanan.
-[Reachability analysis for neural feedback systems using regressive polynomial rule inference] (https://dl.acm.org/doi/10.1145/3302504.3311807). The 22nd ACM International Conference on Hybrid Systems: Computation and Control, April 2019.
+[Reachability analysis for neural feedback systems using regressive polynomial rule inference](https://dl.acm.org/doi/10.1145/3302504.3311807). The 22nd ACM International Conference on Hybrid Systems: Computation and Control, April 2019.
 
 [5] R.Ivanov, T.J. Carpenter, J.Weimer, R.Alur, G.J. Pappas, and I.Lee.
 [Verisig 2.0: Verification of neural network controllers using taylor model preconditioning]. The 33rd International Conference on Computer-Aided Verification, July 2021 (To appear).
