@@ -1,4 +1,4 @@
-CXX = g++-8
+CXX = g++
 include makefile.local
 LIBS = -lmpfr -lgmp -lgsl -lgslcblas -lm -lglpk
 CFLAGS = -I . -I $(GMP_HOME) -g -O3 -std=c++11
@@ -8,7 +8,7 @@ OBJS = Interval.o Variables.o settings.o Matrix.o Geometry.o Constraints.o Conti
 all: flowstar lib
 
 flowstar: $(OBJS) lex.yy.o modelParser.tab.o modelParser.o
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 lib: $(OBJS) lex.yy.o modelParser.tab.o
 	ar rcs libflowstar.a $^

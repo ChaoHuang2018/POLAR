@@ -1,4 +1,4 @@
-CXX = g++-8
+CXX = g++
 HOME= /usr/local/include
 NN_HOME = ./
 LIB_HOME = ./POLAR
@@ -18,94 +18,100 @@ all: benchmark1_relu benchmark1_relu_tanh benchmark1_sigmoid benchmark1_tanh ben
 # all: benchmark6_tanh
 
 runtime: $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) $^ $(LIBS)
 
 benchmark1_relu: systems/reachnn_benchmark_1_relu.o $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 benchmark1_relu_tanh: systems/reachnn_benchmark_1_relu_tanh.o $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 benchmark1_sigmoid: systems/reachnn_benchmark_1_sigmoid.o $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 benchmark1_tanh: systems/reachnn_benchmark_1_tanh.o $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 benchmark2_relu: systems/reachnn_benchmark_2_relu.o $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 benchmark2_relu_tanh: systems/reachnn_benchmark_2_relu_tanh.o $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 benchmark2_sigmoid: systems/reachnn_benchmark_2_sigmoid.o $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 benchmark2_tanh: systems/reachnn_benchmark_2_tanh.o $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 benchmark3_relu: systems/reachnn_benchmark_3_relu.o $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 benchmark3_relu_sigmoid: systems/reachnn_benchmark_3_relu_sigmoid.o $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 benchmark3_sigmoid: systems/reachnn_benchmark_3_sigmoid.o $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 benchmark3_tanh: systems/reachnn_benchmark_3_tanh.o $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 benchmark4_relu: systems/reachnn_benchmark_4_relu.o $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 benchmark4_relu_tanh: systems/reachnn_benchmark_4_relu_tanh.o $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 benchmark4_sigmoid: systems/reachnn_benchmark_4_sigmoid.o $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 benchmark4_tanh: systems/reachnn_benchmark_4_tanh.o $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 benchmark5_relu: systems/reachnn_benchmark_5_relu.o $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 benchmark5_relu_tanh: systems/reachnn_benchmark_5_relu_tanh.o $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 benchmark5_sigmoid: systems/reachnn_benchmark_5_sigmoid.o $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 benchmark5_tanh: systems/reachnn_benchmark_5_tanh.o $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 benchmark6_relu: systems/reachnn_benchmark_6_tora_relu.o $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 benchmark6_relu_tanh: systems/reachnn_benchmark_6_tora_relu_tanh.o $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 benchmark6_sigmoid: systems/reachnn_benchmark_6_tora_sigmoid.o $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 benchmark6_tanh: systems/reachnn_benchmark_6_tora_tanh.o $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 # nn_attitude_control_relu: systems/reachnn_nn_attitude_control_relu.o $(OBJS)
-# 	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+# 	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 #
 # nn_attitude_control_relu_tanh: systems/reachnn_nn_attitude_control_relu_tanh.o $(OBJS)
-# 	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+# 	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 nn_attitude_control_sigmoid: systems/nn_attitude_control_sigmoid.o $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 # nn_attitude_control_tanh: systems/reachnn_nn_attitude_control_tanh.o $(OBJS)
-# 	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+# 	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
-motivating: systems/motivating.o $(OBJS)
-	g++-8 -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+motivating_taylor: systems/motivating_taylor.o $(OBJS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+
+motivating_berns: systems/motivating_berns.o $(OBJS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
+	
+motivating_symbolic:	systems/motivating_symbolic.o $(OBJS)
+	g++ -O3 -w $(LINK_FLAGS) -o $@ $^ $(LIBS)
 
 %.o: %.cc
 	$(CXX) -O3 -c $(CFLAGS) -o $@ $<

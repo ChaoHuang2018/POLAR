@@ -1,8 +1,9 @@
-/* A Bison parser, made by GNU Bison 3.0.4.  */
+/* A Bison parser, made by GNU Bison 3.7.  */
 
 /* Bison interface for Yacc-like parsers in C
 
-   Copyright (C) 1984, 1989-1990, 2000-2015 Free Software Foundation, Inc.
+   Copyright (C) 1984, 1989-1990, 2000-2015, 2018-2020 Free Software Foundation,
+   Inc.
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -30,6 +31,10 @@
    This special exception was added by the Free Software Foundation in
    version 2.2 of Bison.  */
 
+/* DO NOT RELY ON FEATURES THAT ARE NOT DOCUMENTED in the manual,
+   especially those whose name start with YY_ or yy_.  They are
+   private implementation details that can be changed or removed.  */
+
 #ifndef YY_YY_MODELPARSER_TAB_H_INCLUDED
 # define YY_YY_MODELPARSER_TAB_H_INCLUDED
 /* Debug traces.  */
@@ -40,97 +45,101 @@
 extern int yydebug;
 #endif
 
-/* Token type.  */
+/* Token kinds.  */
 #ifndef YYTOKENTYPE
 # define YYTOKENTYPE
   enum yytokentype
   {
-    NUM = 258,
-    IDENT = 259,
-    STATEVAR = 260,
-    TMVAR = 261,
-    TM = 262,
-    EQ = 263,
-    GEQ = 264,
-    LEQ = 265,
-    ASSIGN = 266,
-    END = 267,
-    MODE = 268,
-    INIT = 269,
-    BELONGSTO = 270,
-    PARAAGGREG = 271,
-    INTAGGREG = 272,
-    TMAGGREG = 273,
-    OUTPUT = 274,
-    NOOUTPUT = 275,
-    CONTINUOUS = 276,
-    HYBRID = 277,
-    SETTING = 278,
-    FIXEDST = 279,
-    FIXEDORD = 280,
-    ADAPTIVEST = 281,
-    ADAPTIVEORD = 282,
-    ORDER = 283,
-    MIN = 284,
-    MAX = 285,
-    REMEST = 286,
-    INTERVAL = 287,
-    OCTAGON = 288,
-    GRID = 289,
-    PLOT = 290,
-    QRPRECOND = 291,
-    IDPRECOND = 292,
-    TIME = 293,
-    MODES = 294,
-    JUMPS = 295,
-    INV = 296,
-    GUARD = 297,
-    RESET = 298,
-    START = 299,
-    MAXJMPS = 300,
-    PRINTON = 301,
-    PRINTOFF = 302,
-    UNSAFESET = 303,
-    CONTINUOUSFLOW = 304,
-    HYBRIDFLOW = 305,
-    TAYLOR_PICARD = 306,
-    TAYLOR_REMAINDER = 307,
-    TAYLOR_POLYNOMIAL = 308,
-    EXP = 309,
-    SIN = 310,
-    COS = 311,
-    LOG = 312,
-    SQRT = 313,
-    ODE = 314,
-    CUTOFF = 315,
-    PRECISION = 316,
-    GNUPLOT = 317,
-    MATLAB = 318,
-    COMPUTATIONPATHS = 319,
-    LTIODE = 320,
-    LTVODE = 321,
-    PAR = 322,
-    UNC = 323,
-    UNIVARIATE_POLYNOMIAL = 324,
-    MULTIVARIATE_POLYNOMIAL = 325,
-    TIME_INV = 326,
-    TIME_VAR = 327,
-    STEP = 328,
-    TRUE = 329,
-    FALSE = 330,
-    LINEARCONTINUOUSFLOW = 331,
-    EXPRESSION = 332,
-    MATRIX = 333,
-    uminus = 334
+    YYEMPTY = -2,
+    YYEOF = 0,                     /* "end of file"  */
+    YYerror = 256,                 /* error  */
+    YYUNDEF = 257,                 /* "invalid token"  */
+    NUM = 258,                     /* NUM  */
+    IDENT = 259,                   /* IDENT  */
+    STATEVAR = 260,                /* STATEVAR  */
+    TMVAR = 261,                   /* TMVAR  */
+    TM = 262,                      /* TM  */
+    EQ = 263,                      /* EQ  */
+    GEQ = 264,                     /* GEQ  */
+    LEQ = 265,                     /* LEQ  */
+    ASSIGN = 266,                  /* ASSIGN  */
+    END = 267,                     /* END  */
+    MODE = 268,                    /* MODE  */
+    INIT = 269,                    /* INIT  */
+    BELONGSTO = 270,               /* BELONGSTO  */
+    PARAAGGREG = 271,              /* PARAAGGREG  */
+    INTAGGREG = 272,               /* INTAGGREG  */
+    TMAGGREG = 273,                /* TMAGGREG  */
+    OUTPUT = 274,                  /* OUTPUT  */
+    NOOUTPUT = 275,                /* NOOUTPUT  */
+    CONTINUOUS = 276,              /* CONTINUOUS  */
+    HYBRID = 277,                  /* HYBRID  */
+    SETTING = 278,                 /* SETTING  */
+    FIXEDST = 279,                 /* FIXEDST  */
+    FIXEDORD = 280,                /* FIXEDORD  */
+    ADAPTIVEST = 281,              /* ADAPTIVEST  */
+    ADAPTIVEORD = 282,             /* ADAPTIVEORD  */
+    ORDER = 283,                   /* ORDER  */
+    MIN = 284,                     /* MIN  */
+    MAX = 285,                     /* MAX  */
+    REMEST = 286,                  /* REMEST  */
+    INTERVAL = 287,                /* INTERVAL  */
+    OCTAGON = 288,                 /* OCTAGON  */
+    GRID = 289,                    /* GRID  */
+    PLOT = 290,                    /* PLOT  */
+    QRPRECOND = 291,               /* QRPRECOND  */
+    IDPRECOND = 292,               /* IDPRECOND  */
+    TIME = 293,                    /* TIME  */
+    MODES = 294,                   /* MODES  */
+    JUMPS = 295,                   /* JUMPS  */
+    INV = 296,                     /* INV  */
+    GUARD = 297,                   /* GUARD  */
+    RESET = 298,                   /* RESET  */
+    START = 299,                   /* START  */
+    MAXJMPS = 300,                 /* MAXJMPS  */
+    PRINTON = 301,                 /* PRINTON  */
+    PRINTOFF = 302,                /* PRINTOFF  */
+    UNSAFESET = 303,               /* UNSAFESET  */
+    CONTINUOUSFLOW = 304,          /* CONTINUOUSFLOW  */
+    HYBRIDFLOW = 305,              /* HYBRIDFLOW  */
+    TAYLOR_PICARD = 306,           /* TAYLOR_PICARD  */
+    TAYLOR_REMAINDER = 307,        /* TAYLOR_REMAINDER  */
+    TAYLOR_POLYNOMIAL = 308,       /* TAYLOR_POLYNOMIAL  */
+    EXP = 309,                     /* EXP  */
+    SIN = 310,                     /* SIN  */
+    COS = 311,                     /* COS  */
+    LOG = 312,                     /* LOG  */
+    SQRT = 313,                    /* SQRT  */
+    ODE = 314,                     /* ODE  */
+    CUTOFF = 315,                  /* CUTOFF  */
+    PRECISION = 316,               /* PRECISION  */
+    GNUPLOT = 317,                 /* GNUPLOT  */
+    MATLAB = 318,                  /* MATLAB  */
+    COMPUTATIONPATHS = 319,        /* COMPUTATIONPATHS  */
+    LTIODE = 320,                  /* LTIODE  */
+    LTVODE = 321,                  /* LTVODE  */
+    PAR = 322,                     /* PAR  */
+    UNC = 323,                     /* UNC  */
+    UNIVARIATE_POLYNOMIAL = 324,   /* UNIVARIATE_POLYNOMIAL  */
+    MULTIVARIATE_POLYNOMIAL = 325, /* MULTIVARIATE_POLYNOMIAL  */
+    TIME_INV = 326,                /* TIME_INV  */
+    TIME_VAR = 327,                /* TIME_VAR  */
+    STEP = 328,                    /* STEP  */
+    TRUE = 329,                    /* TRUE  */
+    FALSE = 330,                   /* FALSE  */
+    LINEARCONTINUOUSFLOW = 331,    /* LINEARCONTINUOUSFLOW  */
+    EXPRESSION = 332,              /* EXPRESSION  */
+    MATRIX = 333,                  /* MATRIX  */
+    uminus = 334                   /* uminus  */
   };
+  typedef enum yytokentype yytoken_kind_t;
 #endif
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-
 union YYSTYPE
 {
-#line 31 "modelParser.y" /* yacc.c:1909  */
+#line 31 "modelParser.y"
 
 	double															dblVal;
 	int																intVal;
@@ -152,9 +161,9 @@ union YYSTYPE
 	LTV_Term														*pLTVTerm;
 	LTV_ODE_description												*pLTVDescription;
 
-#line 156 "modelParser.tab.h" /* yacc.c:1909  */
-};
+#line 165 "modelParser.tab.h"
 
+};
 typedef union YYSTYPE YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
