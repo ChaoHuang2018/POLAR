@@ -22,7 +22,10 @@ sudo apt-get install m4 libgmp3-dev libmpfr-dev libmpfr-doc libgsl-dev gsl-bin b
 
 ```
 
-## Running examples - POLAR results
+## Examples - POLAR results
+
+### Running example
+./run_motivating.sh
 
 ### Attitude control
 ./run_attitude_control.sh
